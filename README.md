@@ -65,41 +65,40 @@ Mirrors the trades of the most profitable Solana wallets in real-time. Identifie
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- Python 3.11+
-- Solana wallet with SOL
-- API keys (OpenAI, Anthropic, TikTok, Twitter)
+**→ [Read the full Quick Start Guide](QUICKSTART.md) for detailed setup instructions**
 
-### Installation
+### TL;DR
 
 ```bash
-# Clone the repository
+# Clone and setup
 git clone https://github.com/SolyforTrenchers/ElenatheTrader.git
 cd ElenatheTrader
-
-# Run setup script
-chmod +x setup.sh
 ./setup.sh
 
-# Configure environment
+# Configure (add your API keys and wallet keys)
 cp .env.example .env
-# Edit .env with your API keys and wallet private keys
+nano .env
 
-# Activate virtual environment
+# Run
 source venv/bin/activate
-
-# Run Elena
 python main.py
 ```
 
-### Docker Deployment
+### Docker (Recommended)
 
 ```bash
-# Build and run with Docker Compose
 docker-compose up -d
-
-# View logs
 docker-compose logs -f elena
+```
+
+### Useful Scripts
+
+```bash
+# Check wallet balances
+python scripts/check_balance.py
+
+# Monitor trading activity
+python scripts/monitor.py
 ```
 
 ---
@@ -188,6 +187,15 @@ MIT License - see [LICENSE](LICENSE) file for details
 This is an experimental trading bot. Cryptocurrency trading involves substantial risk of loss. This software is provided "as is" without warranty of any kind. Use at your own risk. Always do your own research and never invest more than you can afford to lose.
 
 ---
+
+## 📚 Documentation
+
+- **[Quick Start Guide](QUICKSTART.md)** - Get up and running in 5 minutes
+- **[Architecture](docs/ARCHITECTURE.md)** - System design and components
+- **[API Documentation](docs/API.md)** - Complete API reference
+- **[Roadmap](ROADMAP.md)** - Future development plans
+- **[Security](SECURITY.md)** - Security best practices
+- **[Contributing](CONTRIBUTING.md)** - How to contribute
 
 ## 🔗 Links
 
